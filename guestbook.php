@@ -1,8 +1,6 @@
 <?php
 
 include 'config.php';
+include 'includes/header.php';
 
-if(!isset($_SESSION['id'])){
-    header('Location: connexion.php');
-    exit();
-}
+
