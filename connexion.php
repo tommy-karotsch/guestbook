@@ -10,6 +10,7 @@ if(!empty($_POST)){
 
     if ($user && password_verify($_POST['password'], $user['password'])){
         $_SESSION['login'] = $user['login'];
+        $_SESSION['id'] = $user['id'];
         header('Location: profil.php');
         exit();
     } else{
@@ -28,12 +29,14 @@ if(!empty($_POST)){
             </div>
         <?php } ?>
 
-        <section class="section">
+        <section>
+            <div class="form-section-connexion">
             <form action="" method="post">
-                <input type="text" name="login" placeholder="Login" value="<?php echo isset($_POST['login']) ? htmlspecialchars($_POST['login']) : ''; ?>">
+                <input type="text" name="login" placeholder="Login" value="<?php echo isset($_POST['login']) ? ($_POST['login']) : ''; ?>">
                 <input type="password" name="password" placeholder="Mot de passe">
                 <input type="submit" value="Se connecter">
             </form>
+            </div>
         </section>
     </main>
 </body>

@@ -5,7 +5,7 @@ include 'config.php';
 $message = '';
 
 if(!empty($_POST)){
-    $login = htmlspecialchars(trim($_POST['login'])); 
+    $login = $_POST['login']; 
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
 
@@ -24,9 +24,9 @@ if(!empty($_POST)){
                 $checkSql = "SELECT count(*) FROM user WHERE login = :login";
                 $checkStmt = $pdo->prepare($checkSql);
                 $checkStmt->execute([':login' => $login]);
-                $userExists = $checkStmt->fetchColumn();
+                $user = $checkStmt->fetchColumn();
 
-                if($userExists > 0){
+                if($user > 0){
                     $message = 'Ce login est déjà pris.';
                 }
                 else{
@@ -64,12 +64,14 @@ if(!empty($_POST)){
         <?php endif; ?>
 
         <section>
-            <form action="" method="post">
-                <input type="text" name="login" placeholder="Login" value="<?php echo isset($login) ? $login : ''; ?>">
-                <input type="password" name="password" placeholder="Mot de passe">
-                <input type="password" name="confirm_password" placeholder="Confirmez le mot de passe">
-                <input type="submit" value="S'inscrire">
+            <div class="form-section-register">
+                <form action="" method="post">
+                    <input type="text" name="login" placeholder="Login" value="<?php echo isset($login) ? $login : ''; ?>">
+                    <input type="password" name="password" placeholder="Mot de passe">
+                    <input type="password" name="confirm_password" placeholder="Confirmez le mot de passe">
+                    <input type="submit" value="S'inscrire">
             </form>
+            </div>
         </section>
     </main>
 </body>

@@ -1,3 +1,9 @@
+
+
+            /* Navigation */
+
+
+
 nav{
     text-align: center;
     margin-bottom: 20px;
@@ -31,7 +37,7 @@ nav a:hover::after {
 h1{
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
-    margin-bottom: 120px;
+    margin-bottom: 60px;
     font-size: 40px;
     background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
     background-clip: text;
@@ -40,37 +46,118 @@ h1{
     padding-left: 20px;
     margin-top: 60px;
 }
-section{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff8dc0f;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+
+/* --- Register, Connexion, Profil, Edit et Confirm_delete PAGES STYLE--- */
+
+
+
+.form-section-connexion, 
+.form-section-register, 
+.edit-container, 
+.box-profil,
+.confirm-delete-container {
+    font-family: 'Sen', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;             
+    padding: 30px;              
+    background-color: #fff;     
+    border-radius: 8px;          
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    text-align: center;         
 }
-.box-profil{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /
-    gap: 15px;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff8dc0f;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+
+
+.form-section-connexion input[type="text"],
+.form-section-connexion input[type="password"],
+.form-section-register input[type="text"],
+.form-section-register input[type="password"],
+.edit-container input[type="text"],
+.edit-container input[type="password"],
+.confirm-delete-container input[type="text"] {
+    width: 100%;
+    padding: 12px;              
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form-section-connexion input[type="submit"],
+.form-section-register input[type="submit"],
+.edit-container button,
+.box-message input[type="submit"] {
+    font-family: 'Sen', sans-serif;
+    width: 100%;
+    padding: 12px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.2s ease;
+}
+
+
+.form-section-connexion input[type="submit"]:hover,
+.form-section-register input[type="submit"]:hover,
+.edit-container button:hover,
+.box-message input[type="submit"]:hover {
+    transform: scale(1.02);
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    color: white;
+}
+
+
+.box-profil {
     list-style: none;
 }
-ul{
+
+.box-profil li {
+    margin: 15px 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.box-profil li:last-child {
+    border-bottom: none;
+}
+
+.box-profil a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Sen', sans-serif;
+    font-size: 18px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.box-profil a:hover {
+    color: #B38728;
+}
+
+.edit-container label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+                    /* Index page style */
+
+
+
+.li-a-index ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding-left: 0px;
+    list-style: none;
 }
-ul a{
-    font-family: 'Sen', sans-serif;;
+.li-a-index ul a{
+    font-family: 'Sen', sans-serif;
     text-align: center;
     color: black;
     text-decoration: none;
@@ -81,7 +168,131 @@ ul a{
     border: 1px solid #AA771C;
     box-shadow: 2px 4px 5px rgba(0,0,0,0.2);
 }
-ul a:hover{
+.li-a-index ul a:hover{
     background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    color: white;
     
+}
+
+            /* Confirm delete page styles */
+
+
+
+.confirm-delete-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;             
+    max-width: 400px;       
+    padding: 30px;
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.confirm-delete-container h2 {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.confirm-delete-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 15px; 
+}
+
+.confirm-delete-container button:hover {
+    background-color: #c9302c;
+}
+
+.confirm-delete-container a {
+    display: inline-block;
+    color: #555;
+    text-decoration: none;
+    font-family: 'Sen', sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+    border-bottom: 1px solid transparent;
+    transition: border 0.3s;
+}
+
+.confirm-delete-container a:hover {
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+            /* Guestbook PAGE STYLE */
+
+
+.box-guestbook{
+    width: 90%; 
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    border: 1px solid #AA771C;
+    box-sizing: border-box; 
+}
+
+.meta-info{
+    font-family: 'Sen', sans-serif;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+.meta-info strong{
+    color: black;
+}
+
+.content{
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+    color: #333;
+}
+
+
+            /* Message PAGE STYLE */
+.box-message{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #fff8dc0f;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+.box-message textarea {
+    grid-column: span 2;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    resize: vertical;
+    font-family: 'Sen', sans-serif;
+    min-height: 100px;
+}
+
+.box-message input[type="submit"]{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
 }
