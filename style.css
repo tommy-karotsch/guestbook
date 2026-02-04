@@ -1,7 +1,4 @@
-
-
-            /* Navigation */
-
+                    /* Navigation */
 
 
 nav{
@@ -48,7 +45,6 @@ h1{
 }
 
 /* --- Register, Connexion, Profil, Edit et Confirm_delete PAGES STYLE--- */
-
 
 
 .form-section-connexion, 
@@ -144,9 +140,20 @@ h1{
     font-weight: bold;
     color: #555;
 }
+            /* Edit page */
+            
+.message-info{
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    color: #721c24;
+    background-color: #f8d7da; 
+    border: 1px solid #f5c6cb; 
+    padding: 10px;             
+    border-radius: 5px;        
+    text-align: center;
+}
 
                     /* Index page style */
-
 
 
 .li-a-index ul{
@@ -174,8 +181,7 @@ h1{
     
 }
 
-            /* Confirm delete page styles */
-
+                  /* Confirm delete page styles */
 
 
 .confirm-delete-container {
@@ -233,7 +239,7 @@ h1{
     border-bottom: 1px solid #000;
 }
 
-            /* Guestbook PAGE STYLE */
+                    /* Guestbook PAGE STYLE */
 
 
 .box-guestbook{
@@ -264,8 +270,9 @@ h1{
     color: #333;
 }
 
+                /* Message PAGE STYLE */
 
-            /* Message PAGE STYLE */
+
 .box-message{
     display: grid;
     grid-template-columns: repeat(1, 1fr);

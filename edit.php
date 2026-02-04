@@ -8,7 +8,7 @@ if(!isset($_SESSION['login'])){
 }
 
 if(!empty($_POST)){
-    $new_login = ($_POST['new_logistring: n']);
+    $new_login = ($_POST['new_login']);
     $current_password = $_POST['current_password'];
     $new_password = $_POST['new_password'];
     $confirm_password = $_POST['confirm_password'];
@@ -64,7 +64,7 @@ if(!empty($_POST)){
         else{
             $message = 'Mot de passe incorrect.';
         }
-    }
+    } 
 }
 
 include 'includes/header.php';
@@ -72,9 +72,6 @@ include 'includes/header.php';
 ?>
     <main>
         <h1>Modifier mon profil</h1>
-        <?php if(isset($message)): ?>
-            <p><?= $message ?></p>
-        <?php endif; ?>
         <div class="edit-container">
         <form method="post">
             <label for="new_login">Nouveau login:</label>
@@ -89,6 +86,10 @@ include 'includes/header.php';
             <label for="confirm_password">Confirmer le nouveau mot de passe:</label>
             <input type="password" name="confirm_password" id="confirm_password">
             
+            <?php if(isset($message)): ?>
+                <p class="message-info"><?= $message ?></p>
+            <?php endif; ?>
+
             <button type="submit">Mettre à jour</button>
         </form>
         </div>

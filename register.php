@@ -58,7 +58,7 @@ if(!empty($_POST)){
         <h1>Inscription</h1>
         
         <?php if(!empty($message)): ?>
-            <div style="color: red; background: #fdd; padding: 10px; border: 1px solid red; margin-bottom: 20px; text-align: center;">
+            <div class="message-info"
                 <?php echo $message; ?>
             </div>
         <?php endif; ?>
