@@ -58,8 +58,9 @@ if(!empty($_POST)){
         <h1>Inscription</h1>
         
         <?php if(!empty($message)): ?>
-            <div class="message-info"
+            <div class="message-info">
                 <?php echo $message; ?>
+        
             </div>
         <?php endif; ?>
 
